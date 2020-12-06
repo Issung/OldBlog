@@ -1,0 +1,92 @@
+﻿@{
+    ViewData["Title"] = "Issun.SonOfGoran - SorterExpress";
+}
+
+<article class="post container" itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+    <header>
+
+        <table>
+            <tr>
+                <td><img src="~/img/portfolio/sorterexpress/sorterexpress.ico" style="max-height: 60px;" /></td>
+                <td><h1 itemprop="name headline" style="width:50%;">SorterExpress</h1></td>
+            </tr>
+        </table>
+
+        @*<h1 itemprop="name headline" style="width:50%;">SorterExpress</h1>*@
+    </header>
+
+    <table>
+        <tr>
+            <td><i class="fab fa-github"></i></td>
+            <td>Open Source @@ <a href="https://github.com/Issung/SorterExpress">GitHub</a></td>
+        </tr>
+    </table>
+
+    <p>SorterExpress is a program made with the goal to greatly speed up manual sorting of media files (images & videos).</p>
+
+    <p>
+        The main sorting feature focuses on allowing the user to create a library of tags, setting a note, and moving the file to another directory.
+        The tags and note are simply placed into the file by the filename, so this is in no way a proprietary solution.
+    </p>
+
+    <p>
+        The program is useful for:
+    </p>
+    <ul>
+        <li>Data hoarders needing to label/categorise many images manually.</li>
+        <li>Artificial intelligence researchers needing to label training data.</li>
+        <li>I've had 1 report of a school using the software to label photos of their students by name/grade/activity.</li>
+    </ul>
+
+    <p>The program supports many different workflows within the same form, so that users can find one that works well for them and sort through files as fast as possible.</p>
+
+    <p>A user can select from one of many different workflows within this one form depending on their desired sorted structure or their goal</p>
+    <ul>
+        <li>Setting multiple tags on each file and saving.</li>
+        <li>Writing a descriptive note for each individual file.</li>
+        <li>Simply moving files to folders based on categories.</li>
+        <li>Skipping through and deleting files they no longer want.</li>
+    </ul>
+
+    <p>
+        Any of these workflows can be chosen or mixed up at will, SorterExpress supports it all. This is supported by providing many ways to quickly access desired
+        controls or information by providing multiple search bars with instantly sort and order results based on suitable criteria and also by <i>many</i> keyboard shortcuts.
+        Once the user begins to find a 'groove' with their workflow they can sort through large directories at blisterings speeds unachievable without such a program.
+    </p>
+
+    <img src="~/img/portfolio/sorterexpress/sort.png" />
+    <p class="subtitle">
+        The sorting form of SorterExpress displays the searchable tag library on the left in which tags can be toggled on or off,
+        directories to move the current file to are displayed in the middle, and a preview of the file is displayed on the right.
+    </p>
+
+    <p>SorterExpress also has the ability to search for duplicate files, just like the sort functionality this also works for both images <i>and</i> videos.</p>
+
+    <p>Just like the sorting form the duplicates searcher also supports multiple workflows. The user can:</p>
+    <ul>
+        <li>Sort through each match, deciding whether to keep the left, right, both or neither, Or:</li>
+        <li>
+            Sort through and filter out all of the false-positives, and then perform a mass operation, in which the user sets their preferences, such as
+            highest resolution or most tags, and perform that operation on every remaining match.
+        </li>
+    </ul>
+
+    <p>The duplicates searcher is multithreaded and can find duplicates within 1000s of images in under a minute, supporting many different filtering options to find the specific matches desired.</p>
+    <p>The duplicates searcher also saves small thumbnails of all searched files as cache to speed up future searches significantly, especially for videos in which grabbing a frame is an expensive operation.</p>
+
+    <img src="~/img/portfolio/sorterexpress/duplicates.png" />
+    <p class="subtitle">The duplicates searcher has found a match between these 2 maps, even though their colours are slightly different and the right image is slightly cropped on the right.</p>
+
+    <p>These 2 forms above are just the main attractions of SorterExpress, the program has many more features, such as:</p>
+    <ul>
+        <li>Undo & Redo ability for sorting & duplicates searching form. Undo even supports retriving deleted files from recycle bin!</li>
+        <li>En masse tagging within an entire directory.</li>
+        <li>Renaming a tag in all files that contain it.</li>
+        <li>Viewing all files matching a tag search criteria.</li>
+        <li>A comprehensive list of settings to help the user customise the program to suit their workflow.</li>
+        <li>Ability to export and import lists of tags for different working environments or sharing in communities.</li>
+        <li>Setting to add context menu options to windows explorer for quick operation of the program.</li>
+    </ul>
+
+    <p>SorterExpress is made using .NET WinForms and is developed open source at <a href="https://github.com/Issung/SorterExpress">GitHub</a>.</p>
+</article>

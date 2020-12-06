@@ -1,0 +1,54 @@
+﻿@{
+    ViewData["Title"] = "Issun.SonOfGoran - GChan";
+}
+
+<article class="post container" itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+    <header>
+        <table>
+            <tr>
+                <td><img src="~/img/portfolio/gchan/logo.png" style="image-rendering: pixelated; min-height:50px; max-height: 60px;" /></td>
+                <td><h1 itemprop="name headline">GChan</h1></td>
+            </tr>
+        </table>
+
+        @*<h1 itemprop="name headline" style="width:50%;">GChan</h1>*@
+    </header>
+
+    <table>
+        <tr>
+            <td><i class="fab fa-github"></i></td>
+            <td>Open Source @@ <a href="https://github.com/Issung/GChan">GitHub</a></td>
+        </tr>
+    </table>
+
+    <img style="margin-top: 10px;" src="https://img.shields.io/github/downloads/issung/GCHan/total?style=for-the-badge" />
+
+    <p>
+        GChan is by far my most popular project, at the time of writing it has 400 downloads, and has had issues and pull requests submitted too, which is a great
+        feeling to maintain a project that people out there use and are willing to help with.
+    </p>
+
+    <p>
+        GChan is a 4chan scraper which runs as a background service in the system tray.
+        Images & Videos are downloaded and saved and all text replies of the thread can optionally be saved too as HTML.
+        The program can be opened from the system tray to interact with the threads/boards that are currently being scraped and change settings.
+    </p>
+
+    <p>
+        The program runs multithreaded and performs routine scrapes at a time interval set by the user.
+    </p>
+
+    <img class="center" src="~/img/portfolio/gchan/program.png" />
+    <p class="subtitle">
+        The main form of the application, displays the threads and boards being scraped in tabs. This form is normally hidden as the program runs as
+        a service in the system tray.
+    </p>
+
+    <img class="center" src="~/img/portfolio/gchan/settings.png" />
+    <p class="subtitle">
+        The settings form of the application, allows the users to customize the behaviour of the application, such as the save location, scrape frequency,
+        saving the HTML of threads, and starting with Windows.
+    </p>
+
+    <p>GChan is made using .NET and WinForms and is developed open source at <a href="https://github.com/Issung/GChan">GitHub</a></p>
+</article>

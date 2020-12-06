@@ -32,11 +32,20 @@ namespace Blog.Models
 
         [Route("/portfolio")]
         [OutputCache(Profile = "default")]
-        public async Task<IActionResult> Portfilio()
+        public async Task<IActionResult> Portfolio()
         {
             ViewData["Title"] = $"{_settings.Value.Name} - Portfolio";
             ViewData["Description"] = _settings.Value.Description;
             return View("Views/Portfolio.cshtml");
+        }
+
+        [Route("/portfolio/{page}")]
+        [OutputCache(Profile = "default")]
+        public async Task<IActionResult> Portfolio([FromRoute] string page = "")
+        {
+            ViewData["Title"] = $"{_settings.Value.Name} - Portfolio";
+            ViewData["Description"] = _settings.Value.Description;
+            return View($"Views/Portfolio/{page}.cshtml");
         }
 
         [Route("blog/{page:int?}")]

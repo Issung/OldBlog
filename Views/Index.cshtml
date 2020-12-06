@@ -1,5 +1,6 @@
-﻿@{
-    ViewData["Title"] = "Index";
+﻿@using Microsoft.AspNetCore.Mvc;
+@{
+    ViewData["Title"] = "Issun.SonOfGoran";
 }
 
 <article class="post container" itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
@@ -16,8 +17,9 @@
 
     <p>Some things that interest me are:</p>
     <ul>
-        <li>The C# Language</li>
+        <li>C# & .NET</li>
         <li>Open Source Software/Hardware</li>
+        <li>Emulation</li>
         <li>Optimisation</li>
         <li>Game Design & Development</li>
         <li>Data Hoarding & Preservation</li>
@@ -30,7 +32,19 @@
     <p>I maintain a handful of my own open source projects, and try to contribute to others when possible.</p>
     <p>My <a href="/portfolio">Portfolio</a> displays the wide range of my current projects and past work.</p>
     <p>
-        I've also setup this website to have a <a href="/blog">Blog</a> where I plan to post about topics such as programming, education, game design and 
+        I've also setup this website to have a <a href="/blog">Blog</a> where I plan to post about topics such as programming, education, game design and
         data hoarding, though I'm not sure how much often I will do this.
     </p>
+
+    @* Render tiny contact page at bottom. *@
+    @{
+        Html.RenderPartial("Contact.cshtml");
+    }
+
+    @* Remove padding from rendered contact section (article inside article). *@
+    <style>        
+        article article {
+            padding: 0px !important;
+        }
+    </style>
 </article>

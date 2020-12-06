@@ -1,7 +1,7 @@
 ﻿@import "variables";
 
 * {
-    margin: 0;
+    /*margin: 0;*/
     padding: 0;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -216,6 +216,7 @@ time {
     }
 
     tr:nth-child(2n) {
+    /*tr:nth-child(odd) {*/
         background: $light-bg-color;
     }
 
@@ -227,4 +228,42 @@ time {
     td, th {
         padding: 2px 7px;
     }
+}
+
+.portfolio-item {
+    /*background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), var(--background);*/
+    background-blend-mode: color;
+    background-color: rgba(0, 0, 0, 0.75);
+    /*background-image: var(--background);*/
+    background-position: center;
+    background-size: cover;
+    padding: 50px;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.25s;
+    color: white;
+    text-decoration: none !important;
+}
+
+.portfolio-item:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    text-decoration: underline !important;
+}
+
+p.subtitle {
+    color: #b1b1b1;
+    margin-top: 0px;
+    font-style: italic;
+    text-align: center; 
+}
+
+s {
+    color: #949494;
+}
+
+.center {
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
 }

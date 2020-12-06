@@ -2,16 +2,75 @@
     ViewData["Title"] = "Portfolio";
 }
 
+<style type="text/css">
+    article a {
+        text-decoration: none;
+    }
+</style>
+
 <article class="post container" itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
     <header>
         <h1 itemprop="name headline">Portfolio</h1>
     </header>
 
     <div itemprop="articleBody mainEntityOfPage" cdnify>
-        
+        <p>This is my portfilio. Lorem ipsum ildor.</p>
+        <h1>Software</h1>
+        <a href="/portfolio/climatefutures">
+            <div class="portfolio-item" style="background-image: url(img/portfolio/background-climatefutures.png);">
+                <h1>Climate Futures Data Extraction Portal</h1>
+                <h6>2020</h6>
+            </div>
+        </a>
+        <a href="/portfolio/sorterexpress">
+            <div class="portfolio-item" style="background-image: url(img/portfolio/background-sorterexpress.png);">
+                <h1>SorterExpress</h1>
+                <h6>2018 - Present</h6>
+            </div>
+        </a>
+        <a href="/portfolio/gchan">
+            <div class="portfolio-item" style="background-image: url(img/portfolio/background-gchan.png);">
+                <h1>GChan</h1>
+                <h6>2019 - Present</h6>
+            </div>
+        </a>
+        @*<div class="portfolio-item" style="background-image: url(https://images.pexels.com/photos/4173624/pexels-photo-4173624.jpeg);">
+            <h1>QuickCrop</h1>
+            <h6>2019</h6>
+        </div>*@
+
+        <br />
+        <h1>Games</h1>
+        <a href="/portfolio/jugglenaut">
+            <div class="portfolio-item" style="background-image: url(img/portfolio/background-jugglenaut.png);">
+                <h1>JuggleNaut</h1>
+                <h6>2019</h6>
+            </div>
+        </a>
+        <a href="/portfolio/tokyokorb2049">
+            <div class="portfolio-item" style="background-image: url(/img/portfolio/background-dog.png);">
+                <h1>Tokyo Korb 2049</h1>
+                <h6>2016</h6>
+            </div>
+        </a>
+
+        <br />
+        <h1>Animation</h1>
+        <a href="/portfolio/mk009">
+            <div class="portfolio-item" style="background-image: url(/img/portfolio/background-mk009.png);">
+                <h1>MK#009</h1>
+                <h6>2015</h6>
+            </div>
+        </a>
     </div>
 
     @*<footer>
         
     </footer>*@
+
+    <script>
+        $(document).ready(function() {
+            
+        });
+    </script>
 </article>
