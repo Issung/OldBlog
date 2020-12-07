@@ -26,6 +26,11 @@ namespace Blog
             Initialize();
         }
 
+        public virtual Task<int> GetPublishedPostsCount()
+        {
+            return Task.FromResult(_cache.Where(p => p.PubDate <= DateTime.UtcNow && (p.IsPublished)).Count());
+        }
+
         public virtual Task<IEnumerable<Post>> GetPosts(int count, int skip = 0)
         {
             bool isAdmin = IsAdmin();

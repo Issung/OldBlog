@@ -53,10 +53,12 @@ namespace Blog.Models
         public async Task<IActionResult> Blog([FromRoute] int page = 0)
         {
             var posts = await _blog.GetPosts(_settings.Value.PostsPerPage, _settings.Value.PostsPerPage * page);
+            var postCount = await _blog.GetPublishedPostsCount();
+            ViewData["PostCount"] = postCount;
             ViewData["Title"] = _settings.Value.Name + " - Blog";
             ViewData["Description"] = _settings.Value.Description;
-            ViewData["prev"] = $"blog/{page + 1}/";
-            ViewData["next"] = $"blog/{(page <= 1 ? null : page - 1 + "/")}";
+            ViewData["prev"] = $"/blog/{page + 1}/";
+            ViewData["next"] = $"/blog/{(page <= 1 ? null : page - 1 + "/")}";
             //return View("Views/Blog/Blog.cshtml", posts);
             return View("Views/Blog/Blog.cshtml", posts);
         }

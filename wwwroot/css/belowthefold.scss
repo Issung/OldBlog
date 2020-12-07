@@ -78,11 +78,12 @@ noscript p {
 .pagination {
     padding-bottom: 2em;
     margin-top: 1em;
+    display: block;
 
     a {
-        border: 1px solid $comments_input_border-color;
-        background: $comments_bg_color;
-        color: $text_color;
+        /*border: 1px solid $comments_input_border-color;
+        background: $comments_bg_color;*/
+        color: #5ab8ff;
         display: inline-block;
         padding: 4px 15px;
         text-decoration: none;
@@ -91,10 +92,10 @@ noscript p {
             float: right;
         }
 
-        &:hover,
+        /*&:hover,
         &:focus {
             background: $comments_border-color;
-        }
+        }*/
     }
 }
 

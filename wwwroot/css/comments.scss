@@ -63,8 +63,9 @@
 
         &[type=submit] {
             width: auto;
-            margin: 1em 0;
-            padding: 5px 10px;
+            margin-top: 10px;
+            padding: 5px 10px 5px 10px;
+            float: right;
         }
     }
 

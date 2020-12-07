@@ -10,19 +10,25 @@
 }
 
 <nav class="pagination container" aria-label="Pagination">
-    @if (Model.Any())
+
+    @{
+        int numPages = Convert.ToInt32(Math.Ceiling((float)(int)ViewData["PostCount"] / settings.Value.PostsPerPage));
+        bool displayPrevButton = (numPages - 1) > currentPage;
+    }
+
+    @if (displayPrevButton)
     {
-        <a rel="prev" href="@ViewData["prev"]" title="Older posts">&laquo; Older</a>
+        <a rel="prev" href="@ViewData["prev"]" title="Older posts">&laquo; Older Posts</a>
     }
     @if (currentPage > 0)
     {
-        <a rel="next" href="@ViewData["next"]" title="Newer posts">Newer &raquo;</a>
+        <a rel="next" href="@ViewData["next"]" title="Newer posts">Newer Posts &raquo;</a>
     }
     <br /><br />
 
     @section Head 
-    {
-        @if (Model.Any())
+    { 
+        @if (displayPrevButton)
         {
             <link rel="prev" href="@ViewData["prev"]" />
         }

@@ -11,6 +11,8 @@ namespace Blog
     {
         Task<IEnumerable<Post>> GetPosts(int count, int skip = 0);
 
+        Task<int> GetPublishedPostsCount();
+
         Task<IEnumerable<Post>> GetPostsByCategory(string category);
 
         Task<Post> GetPostBySlug(string slug);
@@ -35,6 +37,11 @@ namespace Blog
 
         protected List<Post> Cache { get; set; }
         protected IHttpContextAccessor ContextAccessor { get; }
+
+        public virtual Task<int> GetPublishedPostsCount()
+        {
+            return Task.FromResult(Cache.Where(p => p.PubDate <= DateTime.UtcNow && (p.IsPublished)).Count());
+        }
 
         public virtual Task<IEnumerable<Post>> GetPosts(int count, int skip = 0)
         {

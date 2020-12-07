@@ -1,14 +1,15 @@
 @model Post
-@{
-    bool isNew = string.IsNullOrEmpty(Model.Title);
-    ViewData["Title"] = "Edit " + (Model.Title ?? "new post");
-}
+@{ bool isNew = string.IsNullOrEmpty(Model.Title);
+                ViewData["Title"] = "Edit " + (Model.Title ?? "new post"); }
 
 @section Head{
     <link rel="stylesheet" href="~/css/admin.scss" />
 }
 
-<form method="post" id="edit" class="container" asp-controller="Blog" asp-action="UpdatePost">
+@*<form method="post" id="edit" class="container" asp-controller="Blog" asp-action="UpdatePost" asp-route-id="">*@
+@*<form method="post" id="edit" class="container" action="/blog/updatepost">*@
+<form method="post" id="edit" class="container" action="/blog/updatepost" asp-antiforgery="true">
+    @*@Html.AntiForgeryToken()*@
     <div asp-validation-summary="All"></div>
     <input type="hidden" asp-for="@Model.ID" />
 
@@ -39,8 +40,7 @@
 
     @if (!isNew)
     {
-        <input type="submit" value="Delete..." class="delete" title="Delete the post..." asp-action="DeletePost" asp-route-id="@Model.ID" />
-    }
+<input type="submit" value="Delete..." class="delete" title="Delete the post..." asp-action="DeletePost" asp-route-id="@Model.ID" />}
 
     <input asp-for="@Model.IsPublished" />
     <label asp-for="@Model.IsPublished">Is published</label>

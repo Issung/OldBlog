@@ -2,6 +2,10 @@
   "iisSettings": {
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
+    "iis": {
+      "applicationUrl": "http://localhost/Blog",
+      "sslPort": 0
+    },
     "iisExpress": {
       "applicationUrl": "http://localhost:64035/",
       "sslPort": 0
@@ -22,6 +26,10 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
       "applicationUrl": "http://localhost:5000"
+    },
+    "IIS": {
+      "commandName": "IIS",
+      "workingDirectory": "D:\\GitKraken\\Blog"
     }
   }
 }
