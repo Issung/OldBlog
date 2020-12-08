@@ -275,6 +275,14 @@ main > .row {
     margin-left: 5px;
     margin-right: 5px;
 }
+
+article > img {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 800px;
+}
+
 /* Big avatar photo on index */
 .home-photo {
     /* Float Middle */
