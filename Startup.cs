@@ -34,6 +34,10 @@ namespace Blog
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
+#if DEBUG
+                .UseUrls("http://192.168.1.252:5000")
+                .UseUrls("http://joelpc:5000")
+#endif
                 .UseKestrel(a => a.AddServerHeader = false)
                 .Build();
 

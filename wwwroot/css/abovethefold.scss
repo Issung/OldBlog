@@ -14,7 +14,7 @@
 }
 
 .size-indicator {
-    position: absolute;
+    position: fixed;
     top: 15px;
     left: 15px;
     display: block;
@@ -346,19 +346,20 @@ s {
     transform: translateX(-50%);
 }
 
-.carousel {
-    min-height: 299px;
-    background-color: #1f1f1f;
-    /* box-shadow: 0 0 black; */
-    -webkit-box-shadow: inset 0px 0px 51px 5px rgba(0,0,0,1);
-    -moz-box-shadow: inset 0px 0px 51px 5px rgba(0,0,0,1);
-    box-shadow: inset 0px 0px 51px 5px rgba(0,0,0,1);
+#tas-map {
+    min-height: 230px;
+    height: 100%;
+}
 
-    .carousel-inner {
-        vertical-align: middle;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        transition: all 0.3s ease-in-out;
-    }
+#tas-map-inner {
+    background-image: url(/img/tasmania.png);
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-size: contain;
+    padding: 2.5%;
+    height: 100%;
+    /*opacity: 0;
+    transition: opacity 2.5s;*/
 }
