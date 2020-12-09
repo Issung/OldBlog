@@ -3,15 +3,10 @@
     ViewData["Title"] = "Issun.SonOfGoran";
 }
 
-<div class="row">
+<div class="row py-5 index" id="top-banner">
     <div class="container">
-        <div class="row mt-5">
-            <div class="col-sm-12 col-md-5 mb-4 mb-md-0">
-                <div class="home-photo">
-                    <div class="hp-inner"></div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-7">
+        <div class="row py-5" id="banner-content">
+            <div class="col-sm-12 col-md-8">
                 <h1>Hi, I'm Joel</h1>
                 <p>Welcome to my website, I'm Joel or <i>Issun</i> online.</p>
                 <p>
@@ -19,19 +14,20 @@
                     I recently graduated from university with a GPA of 6.8<sup>/7</sup> and am currently searching for employment.
                 </p>
             </div>
+            <div class="d-md-none d-md-block col-md-1">
+            </div>
+            <div class="col-sm-12 col-md-3 mb-4 mb-md-0">
+                <div id="tas-map-inner"></div>
+            </div>
         </div>
     </div>
 </div>
 
-<div class="row">
+<div class="row mt-5 index">
     <div class="container">
         <div class="row">
-            <div class="col-12">
-                <h1>About Me</h1>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12 col-md-5">
+            <div class="col-12 col-md-7 mb-3 mb-md-0">
+                <h1 style="white-space: nowrap;">About Me</h1>
                 <p>Some things that interest me are:</p>
 
                 <ul>
@@ -47,11 +43,15 @@
                 </ul>
 
                 <p>I maintain a handful of my own open source projects, and try to contribute to others when possible.</p>
+                <p>I usually get about the internet with this profile picture:</p>
             </div>
-            <div class="col-12 col-md-7">
-                <div id="tas-map">
-                    <div id="tas-map-inner"></div>
+            <div class="col-12 col-md-5">
+                <div class="home-photo">
+                    <div class="hp-inner"></div>
                 </div>
+                @*<div id="tas-map">
+                    <div id="tas-map-inner"></div>
+                </div>*@
             </div>
         </div>
     </div>
@@ -59,13 +59,19 @@
 
 <div class="row">
     <div class="container">
+        <hr />
+    </div>
+</div>
+
+<div class="row index">
+    <div class="container">
         <div class="row justify-content-md-end">
             <div class="col-6">
                 <h1>Portfolio</h1>
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-12 col-md-6 mb-3 mb-md-0">
+            <div class="col-sm-12 col-md-6 mb-3 mb-md-0 order-2 order-md-1">
                 <div id="carousel" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
@@ -86,7 +92,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-6">
+            <div class="col-sm-12 col-md-6 order-1 order-md-2">
                 <p>My <a href="/portfolio">Portfolio</a> displays the wide range of my current projects and past work, including open source endeavours.</p>
                 <p>
                     I've also setup this website to have a <a href="/blog">Blog</a> where I plan to post about topics such as programming, education, game design and
@@ -98,6 +104,12 @@
 </div>
 
 <div class="row">
+    <div class="container">
+        <hr />
+    </div>
+</div>
+
+<div class="row index">
     <div class="container">
         <div class="row">
             <div class="col-6">
@@ -152,20 +164,20 @@
     //});
 
 
-    const vantaEffect = VANTA.TOPOLOGY({
-        el: "#tas-map",
-        mouseControls: false,
-        touchControls: false,
-        gyroControls: false,
-        minHeight: 100.00,
-        minWidth: 100.00,
-        scale: 0.1,
-        scaleMobile: 0.1,
-        //color: 0x65f565,  // green
-        color: 0x5ab8ff,    // blue
-        //color: 0xffffff,    //white
-        backgroundColor: 0x222222
-    });
+    //const vantaEffect = VANTA.TOPOLOGY({
+    //    el: "#tas-map",
+    //    mouseControls: false,
+    //    touchControls: false,
+    //    gyroControls: false,
+    //    minHeight: 100.00,
+    //    minWidth: 100.00,
+    //    scale: 0.1,
+    //    scaleMobile: 0.1,
+    //    //color: 0x65f565,  // green
+    //    color: 0x5ab8ff,    // blue
+    //    //color: 0xffffff,    //white
+    //    backgroundColor: 0x222222
+    //});
 
     $(document).ready(function () {
         //setTimeout(() => {

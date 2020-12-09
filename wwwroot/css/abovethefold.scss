@@ -55,6 +55,21 @@ p, li, text, footer {
     color: white;
     padding: 15px 40px 0px 40px;
 
+    #navbar-photo {
+        border-radius: 100px;
+        border: 5px grey solid;
+        background-color: white;
+        -webkit-box-shadow: 0px 0px 25px 0px rgb(0,0,0);
+        -moz-box-shadow: 0px 0px 25px 0px rgb(0,0,0);
+        box-shadow: 0px 0px 25px 0px rgb(0,0,0);
+        transition: all 0.25s;
+    }
+
+    #navbar-photo:hover {
+        border-width: 4px;
+        transform: scale(1.075);
+    }
+
     /* Less padding on XS screens. */
     @media screen and (max-width: $xs) {
         padding: 10px 10px 0px 10px;
@@ -62,6 +77,11 @@ p, li, text, footer {
 
     .navbar-sitename {
         color: white;
+        transition: transform 0.1s;
+    }
+
+    .navbar-sitename:hover {
+           transform: scale(1.05);
     }
 
     .nav-item {
@@ -80,12 +100,13 @@ p, li, text, footer {
         font-weight: bold !important;
     }
 
-    .nav-item:hover a {
-        color: white !important;
-    }
-
     .nav-item a {
         color: #8E8E8E !important;
+        transition: color 0.1s;
+    }
+
+    .nav-item:hover a {
+        color: white !important;
     }
 }
 
@@ -272,9 +293,17 @@ time {
 
 main > .row {
     margin-bottom: 30px;
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: 0px;
+    margin-right: 0px;
 }
+
+/*@media screen and (max-width: $xs) {
+    main>.row {*/
+        /*max-width: 95%;*/
+        /*margin-right:0px;
+        margin-left:0px;
+    }    
+}*/
 
 article > img {
     position: relative;
@@ -287,11 +316,12 @@ article > img {
 .home-photo {
     /* Float Middle */
     left: 50%;
-    transform: translateX(-50%);
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
     display: block;
     position: relative;
-    width: 60%;
-    padding-bottom: calc(60% - 24px);
+    width: 70%;                         /* The percentages in width and padding-bottom must be the same!! */
+    padding-bottom: calc(70% - 24px);
     background-color: #fff;
     border-radius: 1000px;
     border: 12px solid grey;
@@ -360,14 +390,45 @@ s {
 }
 
 #tas-map-inner {
-    background-image: url(/img/tasmania.png);
+    background-image: url(/img/tasmania.svg);
+    color: white; 
     background-color: transparent;
     background-position: center;
     background-repeat: no-repeat;
     background-origin: content-box;
     background-size: contain;
-    padding: 2.5%;
     height: 100%;
     /*opacity: 0;
     transition: opacity 2.5s;*/
+}
+
+hr {
+    max-width: 200px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Background image of Hobart. */
+#top-banner {
+    /*background-image: url(https://www.hobartphotographertasmania.com.au/wp-content/uploads/2017/03/D8E3010.jpg);*/
+    background-image: linear-gradient(to bottom, rgba(20,20,20,0.8), rgba(20,20,20,0.7)), url(https://www.hobartphotographertasmania.com.au/wp-content/uploads/2017/03/D8E3010.jpg);
+    background-size: cover;
+    background-position: center;
+    /*background-color: rgba(0,0,0,0.8);
+    background-blend-mode: color;*/
+}
+
+/* Rules just for the index page. */
+.index {
+    #banner-content {
+        padding-top:6rem !important;
+        padding-bottom: 6.5rem !important;
+    } 
+    
+    h1 {
+        font-size: 5rem;
+    }
+
+    p, li, table {
+        font-size: 1.3rem;
+    }
 }
