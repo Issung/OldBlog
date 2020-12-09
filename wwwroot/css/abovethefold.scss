@@ -66,7 +66,6 @@ p, li, text, footer {
     }
 
     #navbar-photo:hover {
-        border-width: 4px;
         transform: scale(1.075);
     }
 
@@ -312,6 +311,20 @@ article > img {
     max-width: 800px;
 }
 
+/*@media screen and (max-width: $md) {
+    .home-photo {
+        left: 50%;
+        float:left;
+        transform: translateX(-50%) translateY(-50%) !important;
+    }
+}
+
+@media screen and (min-width: $md) {
+    .home-photo {
+        float: right;    
+    }
+}*/
+
 /* Big avatar photo on index */
 .home-photo {
     /* Float Middle */
@@ -398,6 +411,7 @@ s {
     background-origin: content-box;
     background-size: contain;
     height: 100%;
+    transform: translateX(-4%);
     /*opacity: 0;
     transition: opacity 2.5s;*/
 }
@@ -419,6 +433,11 @@ hr {
 
 /* Rules just for the index page. */
 .index {
+    #carousel {
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
     #banner-content {
         padding-top:6rem !important;
         padding-bottom: 6.5rem !important;
