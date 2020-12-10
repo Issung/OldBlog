@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<post>
+  <title>JuggleNaut Devlog 2.5: Modelling Buildings; The Importance of Pipes!</title>
+  <slug>jugglenaut-devlog-2p5</slug>
+  <pubDate>2020-12-09 13:05:46</pubDate>
+  <lastModified>2020-12-09 13:07:52</lastModified>
+  <excerpt>The second and a half devlog of JuggleNaut.</excerpt>
+  <content>&lt;p&gt;This post was originally posted in the wrong place on the 30th of September, here:&lt;/p&gt;
+&lt;p&gt;&lt;a style="color: #ff3ae0;" href="https://issung.itch.io/kit207-portfolio/devlog/102258/building-modelling-pipes"&gt;https://issung.itch.io/kit207-portfolio/devlog/102258/building-modelling-pipes&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;But i've copied the entire post below&amp;nbsp; 🔽⏬🔽 so you don't have to bother following the link, please enjoy!&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Okay now read the post. It's actually more like a tutorial but it gives a good insight into how I (Joel) made the buildings for our game, which I will talk about more...&lt;/p&gt;
+&lt;p&gt;Hello reader(s), in this post I'm going to give some insight into how I gained inspiration for and went about creating the buildings for our game.&lt;/p&gt;
+&lt;p&gt;&lt;img style="max-width: 100%; border: 0px;" src="https://img.itch.zone/aW1nLzI1MzYzNDAuanBn/original/Q%2Bp5Uv.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;This is a typical picture among the pictures i use for inspiration for our game's buildings. It's in japan, it's boxy and features little decoration for visual appeal, it is also lit by the blue ambient glow of a modern city street. One thing you may notice is that it is *covered* with pipes, vents and things of the sort, you may not consciously know but this is a common feature of design in most futuristic media. Why? I guess they take most of their inspiration from Japanese street photos too...&lt;/p&gt;
+&lt;p&gt;In this post I'm gonna show you how I went about making these pipes on buildings. First thing is first, we're going to use bezier maths to make our pipes easily, so we need a bezier curve and a bezier circle, which is just a curve but it reconnects to itself, you can make a curve do this too by checking a box but this is faster!&lt;/p&gt;
+&lt;p&gt;&lt;img style="max-width: 100%; border: 0px;" src="https://img.itch.zone/aW1nLzI1MzYzNDYucG5n/original/9Sk9JQ.png" /&gt;&amp;nbsp;Pick these in blender's 'create' window.&lt;/p&gt;
+&lt;p&gt;&lt;img style="max-width: 100%; border: 0px;" src="https://img.itch.zone/aW1nLzI1MzYzNDkucG5n/original/FzWse1.png" /&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;You should get these 2 things!&lt;/p&gt;
+&lt;p&gt;Now, select (right click) the bendy line looking thing, which is our curve, go to the curve properties tab, and set the bevel object to be the circle.&lt;/p&gt;
+&lt;p&gt;&lt;img style="max-width: 100%; border: 0px;" src="https://img.itch.zone/aW1nLzI1MzYzNTMucG5n/original/3JcodV.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img style="max-width: 100%; border: 0px;" src="https://img.itch.zone/aW1nLzI1MzYzNTQucG5n/original/eOeU45.png" /&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Check it out! It gives us a weird looking tube!&lt;/p&gt;
+&lt;p&gt;By pressing TAB to enter edit mode, we can edit the vertices of this curve, they don't act like normal blender mesh vertices though,&amp;nbsp; these use vector maths and have weights!&lt;/p&gt;
+&lt;p&gt;&lt;img style="max-width: 100%; border: 0px;" src="https://img.itch.zone/aW1nLzI1MzYzNTgucG5n/original/EvBV3k.png" /&gt;&amp;nbsp;We can make the tube do cool shapes and bends!&lt;/p&gt;
+&lt;p&gt;In our game we are going for a low poly aesthetic, this looks cool, is in fashion and is also less demanding on hardware! To make our pipe low poly we will select the bezier circle and reduce its resolution to 2.&lt;/p&gt;
+&lt;p&gt;&lt;img style="max-width: 100%; border: 0px;" src="https://img.itch.zone/aW1nLzI1MzYzNjAucG5n/original/%2BQN%2BHh.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img style="max-width: 100%; border: 0px;" src="https://img.itch.zone/aW1nLzI1MzYzNjEucG5n/original/Umqoo4.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Our pipe looks like this now (look at the ends), it still looks pretty smooth for some reason. We need to tweak more settings!&lt;/p&gt;
+&lt;p&gt;Go to the pipe's curve tab and untick the "smooth" box.&lt;/p&gt;
+&lt;p&gt;&lt;img style="max-width: 100%; border: 0px;" src="https://img.itch.zone/aW1nLzI1MzYzNjIucG5n/original/vB1IJ3.png" /&gt;&lt;/p&gt;
+&lt;p&gt;That makes the pipe look like this!&lt;/p&gt;
+&lt;p&gt;&lt;img style="max-width: 100%; border: 0px;" src="https://img.itch.zone/aW1nLzI1MzYzNjMucG5n/original/tHRQKE.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Still a bit too smooth though, let's change the resoultion like we did on the circle (in the curve tab again)...&lt;/p&gt;
+&lt;p&gt;&lt;img style="max-width: 100%; border: 0px;" src="https://img.itch.zone/aW1nLzI1MzYzNjQucG5n/original/LCHPu1.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img style="max-width: 100%; border: 0px;" src="https://img.itch.zone/aW1nLzI1MzYzNjUucG5n/original/T9DokN.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Check that out! It's looking proper retro now! But it's got a bit of a weird shape, we can fix this by going back into edit mode...&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;img style="max-width: 100%; border: 0px;" src="https://img.itch.zone/aW1nLzI1MzYzNjYucG5n/original/g%2B%2BWBV.png" /&gt;&lt;/p&gt;
+&lt;p&gt;To get that actual "pipe" look, instead of using on point across the top i use two, by putting to points together and making the anchors very short you can get these sharp bends instead of the long bends like in the other images.&amp;nbsp;This is how i make all my pipes look on my buildings, very strictly using 90% angles, it gives a really cool look, compare...&lt;/p&gt;
+&lt;p&gt;&lt;img style="max-width: 100%; border: 0px;" src="https://img.itch.zone/aW1nLzI1MzYzNjcucG5n/original/TJnNOO.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Now i'll show you another trick to be able to make your own boxy vents!&lt;/p&gt;
+&lt;p&gt;Go into the bezier circle's properties again and lower the resolution to ONE!&lt;/p&gt;
+&lt;p&gt;It will make it a diamond, rotate it to be a square (from top down view) and extend it a bit to become a rectangle, check out the effect this has on the pipe.&lt;/p&gt;
+&lt;p&gt;&lt;img style="max-width: 100%; border: 0px;" src="https://img.itch.zone/aW1nLzI1MzYzNzAucG5n/original/5p4UAU.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img style="max-width: 100%; border: 0px;" src="https://img.itch.zone/aW1nLzI1MzYzNzIucG5n/original/T6XsYy.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Pretty cool huh! You can still edit this using the bezier curve just like before, and it makes the building process so much easier! Ready for a bonus tip? Alright check this out, get out of edit mode into object mode and select our boxy vent pipe thing and press ALT+C on the keyboard, then select "Mesh from Curve", it will turn your bezier curve into a mesh!&lt;/p&gt;
+&lt;p&gt;&lt;img style="max-width: 100%; border: 0px;" src="https://img.itch.zone/aW1nLzI1MzYzODAucG5n/original/Je%2Fb9F.png" /&gt;&lt;/p&gt;
+&lt;p&gt;This is useful if you are making the models for game engine use. You can see there is some small room for optimisation here by joining the faces along the bottom to&amp;nbsp;get a lower poly count (higher fps) and you can also close off the ends of the vents by joining the edges with a face.&lt;/p&gt;
+&lt;p&gt;Use this new knowledge to your advantage like i have and make some cool looking futuristic&amp;nbsp;buildings!&lt;/p&gt;
+&lt;p&gt;&lt;img style="max-width: 100%; border: 0px;" src="https://img.itch.zone/aW1nLzI1MzYzODcucG5n/original/W5jLDo.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Remember to look at photos for inspiration, it helps lots!&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;img style="max-width: 100%; border: 0px;" src="https://img.itch.zone/aW1nLzI1MzYzOTIucG5n/original/4KfoKZ.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Try and think about what pipes are actually used for, but dont be afraid to throw logic out the window!&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;img style="max-width: 100%; border: 0px;" src="https://img.itch.zone/aW1nLzI1MzYzOTQucG5n/original/5CEbFY.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Sorry about the excessive amount of pictures in this devlog, hope you are a picture kind of person :p&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Thanks for sticking around to the end! I hope you learnt something :)!&lt;/p&gt;</content>
+  <ispublished>true</ispublished>
+  <categories>
+    <category>game design</category>
+    <category>game development</category>
+    <category>archive</category>
+  </categories>
+  <comments></comments>
+</post>

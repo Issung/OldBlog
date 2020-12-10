@@ -10,18 +10,21 @@
                 <td><h1 itemprop="name headline">GChan</h1></td>
             </tr>
         </table>
-
-        @*<h1 itemprop="name headline" style="width:50%;">GChan</h1>*@
     </header>
 
-    <table>
+    <table class="ml-2">
         <tr>
             <td><i class="fab fa-github"></i></td>
             <td>Open Source @@ <a href="https://github.com/Issung/GChan">GitHub</a></td>
         </tr>
     </table>
 
-    <img style="margin-top: 10px;" src="https://img.shields.io/github/downloads/issung/GCHan/total?style=for-the-badge" />
+    <table class="ml-2 mt-2">
+        <tr>
+            <td><img src="https://img.shields.io/github/downloads/issung/GCHan/total?style=for-the-badge" /></td>
+        </tr>
+    </table>
+    <br />
 
     <p>
         GChan is by far my most popular project, at the time of writing it has 400 downloads, and has had issues and pull requests submitted too, which is a great
@@ -52,3 +55,9 @@
 
     <p>GChan is made using .NET and WinForms and is developed open source at <a href="https://github.com/Issung/GChan">GitHub</a></p>
 </article>
+
+<script>
+    $(document).ready(function() {
+        $('.nav-item:contains("Portfolio")').addClass('active');
+    });
+</script>

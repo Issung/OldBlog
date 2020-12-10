@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<post>
+  <title>JuggleNaut Devlog 4: Crunching for Testing and Feedback!</title>
+  <slug>jugglenaut-devlog-4</slug>
+  <pubDate>2020-12-09 13:09:38</pubDate>
+  <lastModified>2020-12-09 13:09:38</lastModified>
+  <excerpt>The fourth devlog of JuggleNaut.</excerpt>
+  <content>&lt;p&gt;Welcome back to the devlog files... Recently we were told in the week 12 tutorial there&amp;nbsp;would be a testing session, meaning that among the 4 groups in our tutorial we will all be moving around the room (in quite a hectic and unorganised&amp;nbsp;fashion) and taking turns testing each other's games. During this testing we get to watch others play our game and learn limitations of our design just by watching them, and we also get to learn more about our game's shortcomings by listening to their feedback. The tester also gets the chance to see what the other teams are working on and perhaps steal some ideas!&lt;/p&gt;
+&lt;p&gt;So before this week, our game was in quite a poor state and we were really worried that it was in too poor a state to even be tested properly. We were really stressed that this meant we wouldn't get the chance to gain some valuable feedback, so during the week we crunched hard to attempt to get our game into a suitable condition to get that valuable feedback.&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;First thing's first, as this is literally the first thing you see when you run the game, the menu!&lt;/p&gt;
+&lt;p&gt;&lt;img style="max-width: 100%; border: 0px;" src="https://img.itch.zone/aW1nLzI1ODY0NTAucG5n/original/3ez0Fm.png" /&gt;&lt;/p&gt;
+&lt;p&gt;The menu at this point show cases both of the ships, spinning around so you can get a good look at their lacklustre geometry! I must say though, even though we got rid of these ship models eventually, i still have a soft spot for the look of the transparent glass part, oh well, the newer ship model looks much better and suites the style of the game much better, I can't wait to show it to you in the next devlog!&lt;/p&gt;
+&lt;p&gt;Let's get onto some stuff that is far more interesting than a menu...&lt;/p&gt;
+&lt;p&gt;Second thing's... second... We got some proper enemy spawning going! They now spawn in&amp;nbsp; a desired fashion in the traditional "wave" manner, thanks to Aiden's expertise and my guidance on the desired functionality, which I had a hard time articulating into words. Along with that we now also have some extra enemy types, such as some fast ones (blue), some tough ones (yellow) and some evasive ones (purple)! We made sure in our code base to make extensive use of 'genericity', with things like bullets, powerups and enemies, where different types extend the same base class e.g: the base Bullet class is extended by DirectionalBullet, the base Enemy class is extended by all different enemy types such as EnemyGeneric, EnemyFast, EnemyEvasive, the same goes for powerups... This allows for easier programming and more efficient code.&lt;/p&gt;
+&lt;p&gt;You may remember the end of our last devlog (3) the hilarious glitch video, of enemies very undesirably popping-into existence and getting stuck on the left of the screen, stacking up to be within the amount of hundreds and dragging fps to a measly 10, well this has been fixed now! Enemies now spawn off to the right of the screen and move onto it (though you can still see their shadows popping in (the shadows appear further from the right the higher the enemy spawns (No one will notice... right?))).&lt;/p&gt;
+&lt;p&gt;&lt;img style="max-width: 100%; border: 0px;" src="https://img.itch.zone/aW1nLzI1ODY1MTkuZ2lm/original/VtgYiU.gif" /&gt;&amp;nbsp; &amp;nbsp;&lt;/p&gt;
+&lt;p&gt;How embarassing... 😅😅😅&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;And they now&amp;nbsp;happily fly off of the left side of the screen, meaning if the player misses them they miss the oppurtunity to gain points and thus a higher score!&lt;/p&gt;
+&lt;p&gt;&lt;img style="max-width: 100%; border: 0px;" src="https://img.itch.zone/aW1nLzI1ODY1MzIuZ2lm/original/RboF%2BN.gif" /&gt;&amp;nbsp;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;There they go... Make sure to wave goodbye!&amp;nbsp;&amp;nbsp;I wonder what they get up to after they go off the side... is it a bit like the end of shawshank redemption where they move somewhere far away and buy a boat and fix it up and stuff?&amp;nbsp; We may never know.... (Actually they just get deleted. Sorry, RAM is hard to come by!)&lt;/p&gt;
+&lt;p&gt;Now that bad joke is over... Let's talk about something else more important!&lt;/p&gt;
+&lt;p&gt;The work done in creating the menu has flowed over into the actual game too, Aiden has implemented some more UI across the top, showing the wave number and the player's current score:&lt;/p&gt;
+&lt;p&gt;&lt;img style="max-width: 100%; border: 0px;" src="https://img.itch.zone/aW1nLzI1ODY3NzYucG5n/original/WweFkN.png" /&gt;&lt;/p&gt;
+&lt;p&gt;There is also the beginnings of a game over screen here!&lt;/p&gt;
+&lt;p&gt;&lt;img style="max-width: 100%; border: 0px;" src="https://img.itch.zone/aW1nLzI1ODY4MDIucG5n/original/49a835.png" /&gt;&lt;/p&gt;
+&lt;p&gt;How did i manage to die with all those healthpacks there? :(&lt;/p&gt;
+&lt;p&gt;Unfortunately there just isn't many new features to talk about in this week, a majority of time was spent polishing the game up enough so that it was playable for the testing session. Fortunately this paid off in a big way and we were able to get lots of valuable feedback from our testers. Leading to lots of developments in the remaining time we have until submission. Sorry about that! See you next devlog! I hope you learnt something :).&lt;/p&gt;</content>
+  <ispublished>true</ispublished>
+  <categories>
+    <category>game design</category>
+    <category>game development</category>
+    <category>archive</category>
+  </categories>
+  <comments></comments>
+</post>

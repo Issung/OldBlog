@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<post>
+  <title>JuggleNaut Devlog 1: Humble Beginnings</title>
+  <slug>jugglenaut-devlog-1</slug>
+  <pubDate>2020-12-09 13:02:56</pubDate>
+  <lastModified>2020-12-09 13:02:56</lastModified>
+  <excerpt>The first devlog of JuggleNaut</excerpt>
+  <content>&lt;p&gt;Hello Dear Reader, the JuggleNaut devlog posts on this blog are mirrors of the versions originally made at&amp;nbsp;&lt;a href="https://issung.itch.io/kit207prototype"&gt;https://issung.itch.io/kit207prototype&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;They are here for archival purposes. If you wish to read them then please enjoy!&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Hello Dear Reader,&lt;/p&gt;
+&lt;p&gt;Welcome to&amp;nbsp;the (kinda) first devlog.&amp;nbsp; This should have been written a long time ago but the assignment spec was only released recently, that's fun hey! Through these devlogs we're going to be discussing the game's progress through development.&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Because we've been using source control we can travel back in time and reflect on our past commits... Let's have a look 👀!&lt;/p&gt;
+&lt;p&gt;Aiden has been the main programmer throughout this project but since the game idea was my own (Joel is writing this by the way) i wanted to code the core gameplay mechanics myself.&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;The first thing I wanted to do was make draggable ships, i would code this myself, but why reinvent the wheel? This guy did the same thing just fine!&amp;nbsp;&lt;a style="color: #ff3ae0;" href="https://www.youtube.com/watch?v=0yHBDZHLRbQ" rel="nofollow noopener"&gt;https://www.youtube.com/watch?v=0yHBDZHLRbQ&lt;/a&gt;&amp;nbsp;Credit to this dude&amp;nbsp;(Jayanam), what a legend!&lt;/p&gt;
+&lt;p&gt;Let's see the dragging in action 👀&lt;/p&gt;
+&lt;p&gt;&lt;img style="max-width: 100%; border: 0px;" src="https://img.itch.zone/aW1nLzI1NjkxNzMuZ2lm/original/BaKUMK.gif" /&gt;&lt;/p&gt;
+&lt;p&gt;Both cubes use the same script, they use box colliders and rigidbodys (3D), this way they can interact with each other and push each other around, a lot of players find this interactivity intriguing and attempt to use it to play the game easier, but mostly fail because it can be tricky to pull off. I wanted to make sure this worked in the game though for just that purpose!&lt;/p&gt;
+&lt;p&gt;As stated in our game concept document, the player ships were going to constantly fire, the player just had to manage the position of both, that's the hard part, not holding down the shoot button like most scrolling shmups... This required a few scripts to be made, a generic bullet script for different bullet types to extend, this contains fields like speed, direction, friendly or non friendly, color, etc, and a script to place on shooting things called AutoShoot (from memory), in which you specify the bullet's properties and the time between bullets fired.&amp;nbsp; I&amp;nbsp;also made a controller that had a bullet pool, i held this in high importance because *lots* of bullets are going to be fired and i wanted memory to be managed correctly, the bullet pooling system i made works great. Let's see the shooting in action:&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;img style="max-width: 100%; border: 0px;" src="https://img.itch.zone/aW1nLzI1NjkxNzYuZ2lm/original/GbEZsX.gif" /&gt;&lt;/p&gt;
+&lt;p&gt;The bullets match the player's color for obvious reasons.&lt;/p&gt;
+&lt;p&gt;Next i wanted to add some juiciness and feel to it, check this out:&lt;/p&gt;
+&lt;p&gt;&lt;img style="max-width: 100%; border: 0px;" src="https://img.itch.zone/aW1nLzI1NjkxODUuZ2lm/original/WST3Lu.gif" /&gt;&lt;/p&gt;
+&lt;p&gt;The ships (cubes) now rotate in the sort of direction they are travelling, just like a real (well, a fictional) ship does! It does this on 2 axis, we would find later though that the values used would require great tweaking to make this look smooth with an actual ship model (unpredictable mouse movements are not kind to easing).&lt;/p&gt;
+&lt;p&gt;This all looks cool but a big part of our game is (well was going to be) the background, i wanted to get this out of the way (code wise) asap, so i got to work.&lt;/p&gt;
+&lt;p&gt;&lt;img style="max-width: 100%; border: 0px;" src="https://img.itch.zone/aW1nLzI1NjkxODkuZ2lm/original/iGPi4Y.gif" /&gt;&lt;/p&gt;
+&lt;p&gt;The idea behind this is very simple, you have 2 objects, one moves past the camera and goes back to the start and the other object does the same, the code for this was no more than 20 lines from memory, it's very basic, this technique is used in games of all sorts, usually with more segments than two though, to avoid repetition, check out the "Boundary Break" series on youtube to see more of this stuff, i think it is shown well in this video from memory, i watched it when it came out, not watching it again sorry, i know it mentions the scrolling background at least once:&amp;nbsp;&lt;a style="color: #ff3ae0;" href="https://www.youtube.com/watch?v=6AmZ4lpXn70" rel="nofollow noopener"&gt;https://www.youtube.com/watch?v=6AmZ4lpXn70&lt;/a&gt;.&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;I made the grounds different colors just so i differentiate between them, hehe. At this point i added some placeholder buildings.&lt;/p&gt;
+&lt;p&gt;&lt;img style="max-width: 100%; border: 0px;" src="https://img.itch.zone/aW1nLzI1NjkxOTEuZ2lm/original/zoCIo0.gif" /&gt;&lt;/p&gt;
+&lt;p&gt;Cubes of all shapes and sizes, how cool is that! It is very hard to decide where to place these things when you are doing it, it doesnt seem like it would be difficult but it is hahaha. The cubes are placed as children of the ground objects, so they dont have to run the script also, i suppose that is better for performance, but who can be bothered benchmarking such a small thing.&lt;/p&gt;
+&lt;p&gt;Now for one last thing, I wanted to add some enemies, these are pretty basic at this iteration and are just cubes that have health that gets decreased when shot, they can easily be made to shoot by simply reusing the AutoShoot script i made earlier for the players, just by changing the bullet direction, and friendliness, and probably changing the color to red would be nice too.&lt;/p&gt;
+&lt;p&gt;Let's see how it looks all together at this point:&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;img style="max-width: 100%; border: 0px;" src="https://img.itch.zone/aW1nLzI1NjkxOTguZ2lm/original/cU2e0t.gif" /&gt;&lt;/p&gt;
+&lt;p&gt;Sorry the quality of this gif is a little lower than the others, i had to compress it (3mb limit 🥱).&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;I hope you enjoyed the first entry and look forward to reading the rest.&amp;nbsp; Believe me when I say they are coming soon 😅 I hope you learnt something!&lt;/p&gt;</content>
+  <ispublished>true</ispublished>
+  <categories>
+    <category>game design</category>
+    <category>game development</category>
+    <category>archive</category>
+  </categories>
+  <comments></comments>
+</post>

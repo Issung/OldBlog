@@ -40,3 +40,9 @@
 </nav>
 
 @{await Html.RenderPartialAsync("_SocialSharing", ViewData["Title"]);}
+
+<script>
+    $(document).ready(function() {
+        $('.nav-item:contains("Blog")').addClass('active');
+    });
+</script>

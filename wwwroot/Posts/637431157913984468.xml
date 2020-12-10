@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<post>
+  <title>JuggleNaut Devlog 2: Still Humble Beginnings...</title>
+  <slug>jugglenaut-devlog-2</slug>
+  <pubDate>2020-12-09 13:04:41</pubDate>
+  <lastModified>2020-12-09 13:04:41</lastModified>
+  <excerpt>The second devlog of JuggleNaut.</excerpt>
+  <content>&lt;p&gt;You would think that with a first devlog post title "Humble Beginnings" that the next one would be incredible and we'd suddenly no longer be humble and be completely full of ourselves with our heads the size of the&amp;nbsp;&lt;em&gt;Goodyear&amp;nbsp;&lt;/em&gt;Blimp, but we have subverted your expectations! Our game still looks awful at this point (Week 2) but it is getting better! Firstly, Aiden (Sir ComputerProgrammerFreak) was tasked with creating a new ship model for our enemies to use, let's take a look 👀 at it...&lt;/p&gt;
+&lt;p&gt;&lt;img style="max-width: 100%; border: 0px;" src="https://img.itch.zone/aW1nLzI1NjkzMzIucG5n/original/WtlJNN.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Would you look at that, it's looking fantastic (its probably the best model in the game), i'm feeling hot just looking at it, dare we look at more...&lt;/p&gt;
+&lt;p&gt;I'm gonna try and put a 3D model viewer in here for you can see it's beauty&amp;nbsp; for yourself...&lt;/p&gt;
+&lt;p style="color: #ffffff; font-family: Lato, Lato, LatoExtended, sans-serif; font-size: 16px; background-color: #3a3a3a;"&gt;&lt;iframe style="max-width: 100%; border-width: 0px; border-style: initial;" src="https://sketchfab.com/models/c57aa4a8f84b46c1981884bf756efd6f/embed" width="640" height="480" frameborder="0"&gt;&lt;/iframe&gt;Looks like it works! How about that!&lt;/p&gt;
+&lt;p&gt;This is the only enemy model we plan to make because they are complex and we have a short time limit, but we distinguish between enemy functions or "types" if you will by color, later on this model was slightly modified to better show it's colors to the player.&lt;/p&gt;
+&lt;p&gt;Aiden also made for us a health pack model, it is one of the items that the player can pick up (at this point it was the only item, and you couldn't pick it up 🤐)&lt;/p&gt;
+&lt;p&gt;&lt;img style="max-width: 100%; border: 0px;" src="https://img.itch.zone/aW1nLzI1NjkzOTAucG5n/original/ejbYBO.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Also at this point, I added and modified for our use this old health bar script i had made a long time ago.&amp;nbsp;We have 2 of them in this game, one for each of the player's ships, with matching colors so you can tell which one is which :) It has a very nice tween animation and is flexible in the way it looks and acts with exposed properties in the editor. Check it out!&lt;/p&gt;
+&lt;p&gt;&lt;img style="max-width: 100%; border: 0px;" src="https://img.itch.zone/aW1nLzI1Njk0MDAuZ2lm/original/fzhAJG.gif" /&gt;&lt;/p&gt;
+&lt;p&gt;What else did we have in development at this point... Aiden had found a skybox texture (on the unity asset store i believe) and had created a script to constantly rotate it at a set speed, this is much better than just a static skybox or the like which we had before, no skybox at all.&lt;/p&gt;
+&lt;p&gt;Check it out in this low quality compressed gif (sorry)!&lt;/p&gt;
+&lt;p&gt;&lt;img style="max-width: 100%; border: 0px;" src="https://img.itch.zone/aW1nLzI1Njk0MDIuZ2lm/original/j3%2FTiU.gif" /&gt;&lt;/p&gt;
+&lt;p&gt;And i also ported over some old code of mine to make this cool effect for when the player gets hit (you can tell that we were starting to think about health in general in this period of development)...&lt;/p&gt;
+&lt;p&gt;&lt;img style="max-width: 100%; border: 0px;" src="https://img.itch.zone/aW1nLzI1Njk0MDQuZ2lm/original/Uta9u0.gif" /&gt;&lt;/p&gt;
+&lt;p&gt;It doesn't look too fantastic in this small gif here...&amp;nbsp;among many things it scatters each row of pixels on the screen, which is hard to make out in such a small gif, but you can see the general gist of it here! It looks great in game at proper resolution!&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;A word about&amp;nbsp;&lt;strong&gt;source control&lt;/strong&gt;...&lt;/p&gt;
+&lt;p&gt;Initially with our project we used Unity Collab, word of advice, don't go near this thing with a 10ft pole for at least the next few years until they can fix it.&amp;nbsp; The straw that finally broke the camels back was us having&amp;nbsp;constant issues with Unity Collab completely stopping our game from running with 100+ compile time errors.&amp;nbsp; So we moved our project to BitBucket, and tried SourceTree (Git GUI Client), bitbucket was fine but sourcetree gave us nothing but issues.&amp;nbsp; Desperate to find ourselves a working solution we tried GitKraken, another GIT GUI Client, and this worked flawlessly for us.&amp;nbsp; I recommend this for other developers, the only problem being that you must pay if you want to use private repos, which was/is not an issue for our team though. Just make sure to get your .gitignore setup properly! And once again, don't reinvent the wheel... -&amp;gt;&amp;nbsp;&lt;a style="color: #ff3ae0;" href="https://github.com/github/gitignore/blob/master/Unity.gitignore" rel="nofollow noopener"&gt;https://github.com/github/gitignore/blob/master/Unity.gitignore&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Thanks for reading, see you in the next devlog and I hope you learnt something!&lt;/p&gt;</content>
+  <ispublished>true</ispublished>
+  <categories>
+    <category>game design</category>
+    <category>game development</category>
+    <category>archive</category>
+  </categories>
+  <comments></comments>
+</post>

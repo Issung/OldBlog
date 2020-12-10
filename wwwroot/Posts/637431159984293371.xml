@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<post>
+  <title>JuggleNaut Devlog 3: Thinking of a subtitle...</title>
+  <slug>jugglenaut-devlog-3</slug>
+  <pubDate>2020-12-09 13:08:47</pubDate>
+  <lastModified>2020-12-09 13:08:47</lastModified>
+  <excerpt>The third devlog of JuggleNaut.</excerpt>
+  <content>&lt;p&gt;Hi and welcome to Devlog 3! I hope you have been enjoying them so far, in this devlog you can see the aesthetic and gameplay beginning to take a rough shape, let's have a look.&lt;/p&gt;
+&lt;p&gt;I (Joel) took on the role of making the background building models, I was kind of dreading this as I'm a pretty horrible modeller, but over the course of the 11 buildings i made, i begun to get much better (imagine that)! So much better in fact that when i went back to look at my older buildings, they looked like complete garbage! So I had to update them a bit more, without radically changing them to a whole new model I could only make them look a little better.&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;So before we dive into some aspects of the game let's have a look at some buildings. I found it very handy to have images for inspiration and reference, i made an album of all the images i used here: I kept the collection very small (21 images) because I think over choice in inspiration can lead to distraction and jumbling of ideas. View the album here:&amp;nbsp;&lt;a style="color: #ff3ae0;" href="https://imgur.com/a/I6mG9Ri" rel="nofollow noopener"&gt;https://imgur.com/a/I6mG9Ri&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Now let's have a look at some creations... You can see them all here:&amp;nbsp;&lt;a style="color: #ff3ae0;" href="https://imgur.com/a/ELZVSuc" rel="nofollow noopener"&gt;https://imgur.com/a/ELZVSuc&lt;/a&gt;&amp;nbsp;But I'll show some highlights in this post instead because you can't collapse them or anything in this website so the reader (you) would have to scroll through them all...&lt;/p&gt;
+&lt;p&gt;Here is the very first building i made, marvel at its ugliness:&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;img style="max-width: 100%; border: 0px;" src="https://img.itch.zone/aW1nLzI1NzQ4OTQucG5n/original/M5vifV.png" /&gt;&lt;/p&gt;
+&lt;p&gt;I went from making buildings like that to buildings like these:&lt;/p&gt;
+&lt;p&gt;&lt;img style="max-width: 100%; border: 0px;" src="https://img.itch.zone/aW1nLzI1NzQ5MDIucG5n/original/C2LLZ9.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img style="max-width: 100%; border: 0px;" src="https://img.itch.zone/aW1nLzI1NzQ5MDEucG5n/original/%2BbeYCS.png" /&gt;&lt;/p&gt;
+&lt;p&gt;If you want to learn a little more about making these buildings check out the last Devlog (2.5).&lt;/p&gt;
+&lt;p&gt;So we decided to stop teasing with these models and bring them into the game, we bought them in just using blend files to begin with but we ran into some issues with this, particularly with the Bezier pipes method that I was using, and also with object modifiers such as array, that i use to duplicate stairs, window sills, doors, etc.&lt;/p&gt;
+&lt;p&gt;&lt;img style="max-width: 100%; border: 0px;" src="https://img.itch.zone/aW1nLzI1NzQ5MTcucG5n/original/Pa8B%2BW.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Best illustrated with this model, you can see that the pipes were going the wrong directions and the fire escape stairs that use the array modifier wasn't compatible inside of unity, so there is only a single set of stairs.&lt;/p&gt;
+&lt;p&gt;We also encountered errors with Boolean operations too:&lt;/p&gt;
+&lt;p&gt;&lt;img style="max-width: 100%; border: 0px;" src="https://img.itch.zone/aW1nLzI1NzQ5NzkucG5n/original/LFrqL7.png" /&gt;&lt;/p&gt;
+&lt;p&gt;The shapes sticking out of this building are actually supposed to be used in a Boolean operation to cut those shapes out of the building.&lt;/p&gt;
+&lt;p&gt;At this point we also bought in some old ship models i had made for the players, at the time these were supposed to stay, but once the game was polished enough they looked bad and out of place, they eventually got replaced with a new model I had made because of this reason.&lt;/p&gt;
+&lt;p&gt;&lt;img style="max-width: 100%; border: 0px;" src="https://img.itch.zone/aW1nLzI1NzQ5NzMucG5n/original/MYMXqD.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Enough about models! Let's talk about what's been added in other areas.&lt;/p&gt;
+&lt;p&gt;At this point we have the enemies spawning, moving and shooting. The spawning system we have at this point was very simple and not much like the end goal and what we currently have, but it was good to get a general feel for the gameplay.&lt;/p&gt;
+&lt;p&gt;&lt;img style="max-width: 100%; border: 0px;" src="https://img.itch.zone/aW1nLzI1NzUwNDgucG5n/original/g2srYJ.png" /&gt;&lt;/p&gt;
+&lt;p&gt;You can see at this point we had some debug text on the top of the enemies saying "Generic", and you may be able to tell by the screenshot, there is way too many bullets, the player ships can't even get in front of the enemies without being blasted by a plethora of bullets!&lt;/p&gt;
+&lt;p&gt;We also have pickups spawning at this point in time, such as faster shooting and health packs, you need these goodies to try and survive as long as you can!&lt;/p&gt;
+&lt;p&gt;&lt;img style="max-width: 100%; border: 0px;" src="https://img.itch.zone/aW1nLzI1NzUwNTIucG5n/original/xqQzao.png" /&gt;&lt;/p&gt;
+&lt;p&gt;The last thing added at this point was some simple sound effects, at this point we had added suitable background music, '&lt;a style="color: #ff3ae0;" href="https://en.wikipedia.org/wiki/Age_of_Love_(song)" rel="nofollow noopener"&gt;Age of Love&lt;/a&gt;' by Age of Love remixed by&amp;nbsp;&lt;a style="color: #ff3ae0;" href="https://en.wikipedia.org/wiki/Jam_%26_Spoon" rel="nofollow noopener"&gt;Jam and Spoon&lt;/a&gt;, used in the first '&lt;a style="color: #ff3ae0;" href="https://en.wikipedia.org/wiki/Wipeout_(series)" rel="nofollow noopener"&gt;Wipeout&lt;/a&gt;' game released for the original&amp;nbsp;&lt;a style="color: #ff3ae0;" href="https://en.wikipedia.org/wiki/PlayStation_(console)" rel="nofollow noopener"&gt;PlayStation&lt;/a&gt;,&amp;nbsp;&lt;a style="color: #ff3ae0;" href="https://en.wikipedia.org/wiki/MS-DOS" rel="nofollow noopener"&gt;MS-DOS PC's&lt;/a&gt;&amp;nbsp;and later, the&amp;nbsp;&lt;a style="color: #ff3ae0;" href="https://en.wikipedia.org/wiki/Sega_Saturn" rel="nofollow noopener"&gt;Sega Saturn&lt;/a&gt;. We also have some shooting sounds.&amp;nbsp; At this point the shooting sounds played way too much because of the amount of bullets that the enemies shot, and it would glitch out the sound player and eventually go quiet, some other glitches are that the enemies spawn on-screen instead of off to the side, they don't go off of the left side either so they pile up, and then you can play with them because of the rigid bodies, thus hilarity ensues, check it out:&lt;/p&gt;
+&lt;p&gt;&lt;iframe style="max-width: 100%; border-width: 0px; border-style: initial; color: #ffffff; font-family: Lato, Lato, LatoExtended, sans-serif; font-size: 16px; background-color: #3a3a3a;" src="https://www.youtube.com/embed/p3jGhlm1wAs" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Check out one of the building's 3D models in an interactive manner&amp;nbsp;here:&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Normally the back of the building is all cut off so that the game engine doesn't have to worry about them but I've kept them in this upload for your viewing pleasure.&lt;br /&gt;Use left click to rotate the model around and right click to pan, but&amp;nbsp;whatever you do, do NOT look underneath the&amp;nbsp;building, under any circumstances! Or you will meet with a terrible fate.&lt;/p&gt;
+&lt;div class="" style="color: #ffffff; font-family: Lato, Lato, LatoExtended, sans-serif; font-size: 16px; background-color: #3a3a3a;"&gt;&lt;iframe style="max-width: 100%; border-width: 0px; border-style: initial;" src="https://sketchfab.com/models/f8a7dd070d1a4d67ad00c8e28fbd5391/embed" width="640" height="480" frameborder="0"&gt;&lt;/iframe&gt;&lt;/div&gt;
+&lt;p style="color: #ffffff; font-family: Lato, Lato, LatoExtended, sans-serif; font-size: 16px; background-color: #3a3a3a;"&gt;&lt;br /&gt;Thanks for reading this devlog, I hope you enjoyed it and I hope you learnt something :).&lt;/p&gt;</content>
+  <ispublished>true</ispublished>
+  <categories>
+    <category>game design</category>
+    <category>game development</category>
+    <category>archive</category>
+  </categories>
+  <comments></comments>
+</post>
